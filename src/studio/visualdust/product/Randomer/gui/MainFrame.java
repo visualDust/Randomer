@@ -82,7 +82,6 @@ public class MainFrame extends JFrame {
                 String[] strings = new String[10];
                 for (int i = 0; i < 9; i++) {
                     strings[i] = MainFrame.this.shuffler.next().getName();
-
                 }
                 for (int i = 0; i < 9; i++) {
                     display.setText(strings[i]);
