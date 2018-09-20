@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Randomer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Randomer_jar</output-path>
+    <root id="archive" name="Randomer.jar">
+      <element id="module-output" name="Randomer" />
+    </root>
+  </artifact>
+</component>
