@@ -3,7 +3,7 @@ package studio.visualdust.product.Randomer.structure;
 import java.util.*;
 
 public class Shuffler<T> implements Iterator<T> {
-    private List<T> list;
+    public List<T> list;
     private int index = 0;
     private int size;
 

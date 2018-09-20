@@ -1,6 +1,7 @@
 package studio.visualdust.product.Randomer.gui;
 
 import studio.visualdust.product.Randomer.method.EventRW;
+import studio.visualdust.product.Randomer.resource.Resource;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.Shuffler;
 import studio.visualdust.product.gztwigets.GButton;
@@ -65,6 +66,13 @@ public class MainFrame extends JFrame {
             }
         });
         this.add(nextButton);
+
+        JLabel versionLabel = new JLabel(Resource.softName + Resource.version + " By " + Resource.author, JLabel.LEFT);
+        versionLabel.setFont(new Font("等线", 0, 15));
+        versionLabel.setForeground(new Color(200, 200, 200));
+        versionLabel.setSize(WIDTH, 15);
+        versionLabel.setLocation(0, 0);
+        this.add(versionLabel);
     }
 
     public Shuffler<ListItem> getShuffler() {
@@ -81,12 +89,10 @@ public class MainFrame extends JFrame {
         @Override
         public void run() {
             try {
-                for (int i = 0; i < 9; i++) {
-                    strings[i] = MainFrame.this.shuffler.next().getName();
-                }
-                for (int i = 0; i < 9; i++) {
-                    display.setText(strings[i]);
-                    Thread.sleep(10);
+                for (int i = 0; i < shuffler.list.size(); i++) {
+                    if (i >= 15) break;
+                    display.setText(shuffler.list.get(i).getName());
+                    sleep(10);
                 }
             } catch (Exception e1) {
                 EventRW.Write(e1);
