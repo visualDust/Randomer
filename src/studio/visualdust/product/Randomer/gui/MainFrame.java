@@ -76,10 +76,11 @@ public class MainFrame extends JFrame {
     }
 
     class Refresher extends Thread {
+        String[] strings = new String[10];
+
         @Override
         public void run() {
             try {
-                String[] strings = new String[10];
                 for (int i = 0; i < 9; i++) {
                     strings[i] = MainFrame.this.shuffler.next().getName();
                 }
@@ -93,6 +94,7 @@ public class MainFrame extends JFrame {
             String name = MainFrame.this.shuffler.next().getName();
             display.setText(name);
             EventRW.Write("New random created : " + name);
+            System.gc();
         }
     }
 }
