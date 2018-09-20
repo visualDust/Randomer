@@ -74,10 +74,15 @@ public class LinedFile {
                 InputStream inputStream = new FileInputStream(readerFile);
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
                 String str = bufferedReader.readLine();
+                if (str.length() != 0) {
+                    strings.add(str);
+                }
                 lineCount = 1;
                 while (str != null) {
-                    strings.add(str);
                     str = bufferedReader.readLine();
+                    if (str.length() == 0)
+                        continue;
+                    strings.add(str);
                     lineCount++;
                 }
             } catch (Exception e) {

@@ -70,6 +70,7 @@ public class MainFrame extends JFrame {
         JLabel versionLabel = new JLabel(Resource.softName + Resource.version + " By " + Resource.author, JLabel.LEFT);
         versionLabel.setFont(new Font("等线", 0, 15));
         versionLabel.setForeground(new Color(200, 200, 200));
+        versionLabel.setForeground(new Color(200, 200, 200));
         versionLabel.setSize(WIDTH, 15);
         versionLabel.setLocation(0, 0);
         this.add(versionLabel);
