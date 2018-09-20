@@ -26,7 +26,6 @@ public class RandomerLauncher {
         }
         ResetFonts();
 //        new MainFrame();
-        EventRW.Write("Randomer Launched");
 
         JFrame rubbishFrame = new JFrame();
         rubbishFrame.setSize(1, 1);
@@ -51,6 +50,23 @@ public class RandomerLauncher {
             }
         });
 
+        messageWindow.cancelButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                EventRW.Write("User exited");
+                System.exit(0);
+            }
+        });
+
+        messageWindow.noButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                EventRW.Write("User exited");
+                System.exit(0);
+            }
+        });
+
+        EventRW.Write("Randomer Launched");
     }
 
     public static Font defaultFont = new Font("等线", 0, 17);
