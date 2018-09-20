@@ -79,8 +79,13 @@ public class MainFrame extends JFrame {
         @Override
         public void run() {
             try {
+                String[] strings = new String[10];
                 for (int i = 0; i < 9; i++) {
-                    display.setText(MainFrame.this.shuffler.next().getName());
+                    strings[i] = MainFrame.this.shuffler.next().getName();
+
+                }
+                for (int i = 0; i < 9; i++) {
+                    display.setText(strings[i]);
                     Thread.sleep(10);
                 }
             } catch (Exception e1) {
