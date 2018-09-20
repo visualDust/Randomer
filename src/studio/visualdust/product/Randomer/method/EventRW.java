@@ -9,17 +9,17 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class EventRW {
-    public static File logoutfile = new File(LocalDate.now().toString() + "_" + Resource.softName + ".md");
+    public static File logoutfile = new File(LocalDate.now().toString() + "_" + Resource.softName + ".md\n");
     public static OutputStream logstream;
 
     public static void Write(Exception e) {
-        FileWriter.WriteLineUTF8(logoutfile, "> " + LocalDateTime.now().toString() + " Exception : " + e.toString(), true);
+        FileWriter.WriteLineUTF8(logoutfile, "> " + LocalDateTime.now().toString() + " Exception : " + e.toString()+"\n", true);
         System.out.println(e.toString());
         e.printStackTrace();
     }
 
     public static void Write(String event) {
-        FileWriter.WriteLineUTF8(logoutfile, LocalDateTime.now().toString() + " Event : " + event, true);
+        FileWriter.WriteLineUTF8(logoutfile, LocalDateTime.now().toString() + " Event : " + event+"\n", true);
         System.out.println(event);
     }
 
