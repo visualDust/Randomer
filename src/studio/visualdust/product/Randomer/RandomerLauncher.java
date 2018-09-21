@@ -17,7 +17,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class RandomerLauncher {
-    static MainFrame mainFrame = new MainFrame(null);
+
 
     public static void main(String[] args) {
         try {
@@ -26,7 +26,8 @@ public class RandomerLauncher {
             EventRW.Write(e);
         }
         ResetFonts();
-//        new MainFrame();
+
+        MainFrame mainFrame = new MainFrame(null);
 
         JFrame rubbishFrame = new JFrame();
         rubbishFrame.setSize(1, 1);
@@ -38,14 +39,14 @@ public class RandomerLauncher {
             public void mouseClicked(MouseEvent e) {
                 ArrayList<ListItem> collection = new ArrayList<>();
                 File file = new File(stripQuotes(messageWindow.getText()));
-                if (!file.isFile()) {
+                if (!file.isFile() || !file.exists()) {
                     EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
                     System.exit(255);
                 }
                 LinedFile linedFile = new LinedFile(file);
                 final int len = (int) linedFile.getLineCount();
                 double[] weights = new double[len];
-                for (int i = 0; i < linedFile.getLineCount() - 1; i++) {
+                for (int i = 0; i < linedFile.getLineCount(); i++) {
                     collection.add(new ListItem(linedFile.getLineOn(i).split(",")[0]));
                     weights[i] = linedFile.getLineOn(i).split(",").length >= 2 ? Double.valueOf(linedFile.getLineOn(i).split(",")[1]) : 1.0;
                 }

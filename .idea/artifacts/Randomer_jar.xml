@@ -3,7 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/Randomer_jar</output-path>
     <root id="archive" name="Randomer.jar">
       <element id="module-output" name="Randomer" />
-      <element id="library" level="project" name="KotlinJavaRuntime" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

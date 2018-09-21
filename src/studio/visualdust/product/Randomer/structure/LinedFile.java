@@ -80,6 +80,7 @@ public class LinedFile {
                 lineCount = 1;
                 while (str != null) {
                     str = bufferedReader.readLine();
+                    if (str == null) break;
                     if (str.length() == 0)
                         continue;
                     strings.add(str);
