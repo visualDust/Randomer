@@ -7,7 +7,7 @@ open class WeighedShuffler<T>(list: List<T>,
                               weight: DoubleArray)
     : Iterator<T>, Iterable<T> {
 
-    private val list: ArrayList<T> = ArrayList(list)
+    public val list: ArrayList<T> = ArrayList(list)
     private val size: Int = list.size
 
     private val weightRange: DoubleArray
@@ -19,11 +19,9 @@ open class WeighedShuffler<T>(list: List<T>,
 
     init {
         weightRange = DoubleArray(size + 1)
-
         for (i in 0 until size) {
             weightRange[i + 1] = weightRange[i] + weight[i]
         }
-
         weightSum = weightRange[size]
     }
 

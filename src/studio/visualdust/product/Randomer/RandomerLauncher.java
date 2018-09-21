@@ -5,6 +5,7 @@ import studio.visualdust.product.Randomer.method.EventRW;
 import studio.visualdust.product.Randomer.structure.LinedFile;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.Shuffler;
+import studio.visualdust.product.Randomer.structure.WeighedShuffler;
 import studio.visualdust.product.gztwigets.GMessageWindow;
 
 import javax.swing.*;
@@ -42,10 +43,13 @@ public class RandomerLauncher {
                     System.exit(255);
                 }
                 LinedFile linedFile = new LinedFile(file);
+                final int len = (int) linedFile.getLineCount();
+                double[] weights = new double[len];
                 for (int i = 0; i < linedFile.getLineCount() - 1; i++) {
-                    collection.add(new ListItem(linedFile.getLineOn(i)));
+                    collection.add(new ListItem(linedFile.getLineOn(i).split(",")[0]));
+                    weights[i] = linedFile.getLineOn(i).split(",").length >= 2 ? Double.valueOf(linedFile.getLineOn(i).split(",")[1]) : 1.0;
                 }
-                mainFrame.setShuffler(new Shuffler<>(collection));
+                mainFrame.setShuffler(new WeighedShuffler<>(collection, weights));
                 mainFrame.setVisible(true);
             }
         });

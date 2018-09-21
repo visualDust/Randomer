@@ -4,6 +4,7 @@ import studio.visualdust.product.Randomer.method.EventRW;
 import studio.visualdust.product.Randomer.resource.Resource;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.Shuffler;
+import studio.visualdust.product.Randomer.structure.WeighedShuffler;
 import studio.visualdust.product.gztwigets.GButton;
 import studio.visualdust.product.gztwigets.GMessageWindow;
 
@@ -18,12 +19,12 @@ public class MainFrame extends JFrame {
 
     JFrame me = this;
 
-    Shuffler<ListItem> shuffler;
+    WeighedShuffler<ListItem> shuffler;
     JLabel display = new JLabel("-- --", JLabel.CENTER);
     GButton nextButton = new GButton("下一个");
     GButton exitButton = new GButton("退出");
 
-    public MainFrame(Shuffler<ListItem> shuffler) {
+    public MainFrame(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
         this.setLayout(null);
         this.setUndecorated(true);
@@ -76,11 +77,11 @@ public class MainFrame extends JFrame {
         this.add(versionLabel);
     }
 
-    public Shuffler<ListItem> getShuffler() {
+    public WeighedShuffler<ListItem> getShuffler() {
         return shuffler;
     }
 
-    public void setShuffler(Shuffler<ListItem> shuffler) {
+    public void setShuffler(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
     }
 
@@ -90,9 +91,9 @@ public class MainFrame extends JFrame {
         @Override
         public void run() {
             try {
-                for (int i = 0; i < shuffler.list.size(); i++) {
+                for (int i = 0; i < shuffler.getList().size(); i++) {
                     if (i >= 15) break;
-                    display.setText(shuffler.list.get(i).getName());
+                    display.setText(shuffler.getList().get(i).getName());
                     sleep(10);
                 }
             } catch (Exception e1) {

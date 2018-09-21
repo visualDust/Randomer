@@ -8,11 +8,19 @@
   <component name="ChangeListManager">
     <list default="true" id="47e9abe7-b14f-4fbe-8749-d0ad8842eac5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2018-09-20_Randomer.md" afterPath="$PROJECT_DIR$/2018-09-20_Randomer.md" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Randomer_jar/Randomer.jar" afterPath="$PROJECT_DIR$/out/artifacts/Randomer_jar/Randomer.jar" />
-      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/structure/LinedFile$ReaderThread.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/structure/LinedFile$ReaderThread.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$1.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$2.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$3.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/RandomerLauncher.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$1$1.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$1$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$1.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$2.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$Refresher.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame$Refresher.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/gui/MainFrame.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/structure/WeighedShuffler.class" afterPath="$PROJECT_DIR$/out/production/Randomer/studio/visualdust/product/Randomer/structure/WeighedShuffler.class" />
+      <change beforePath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java" afterPath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java" />
       <change beforePath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java" afterPath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java" />
-      <change beforePath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java" afterPath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java" />
+      <change beforePath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt" afterPath="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,28 +40,8 @@
       <file leaf-file-name="RandomerLauncher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventRW.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/EventRW.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileWriter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/FileWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="422">
+              <caret line="49" column="139" lean-forward="false" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
               <folding />
             </state>
           </provider>
@@ -62,48 +50,17 @@
       <file leaf-file-name="MainFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+            <state relative-caret-position="275">
+              <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3115#3116#0" expanded="true" />
-                <element signature="e#3146#3147#0" expanded="true" />
-                <element signature="e#3206#3207#0" expanded="true" />
-                <element signature="e#3246#3247#0" expanded="true" />
+                <element signature="e#2541#2703#0" expanded="true" />
+                <element signature="e#2702#2703#0" expanded="true" />
+                <element signature="e#3205#3206#0" expanded="true" />
+                <element signature="e#3236#3237#0" expanded="true" />
+                <element signature="e#3303#3304#0" expanded="true" />
+                <element signature="e#3343#3344#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resource.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/resource/Resource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinedFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="82" column="29" lean-forward="true" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
-              <folding>
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shuffler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Shuffler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,8 +68,8 @@
       <file leaf-file-name="WeighedShuffler.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="-587">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
                 <element signature="e#54#108#0" expanded="true" />
               </folding>
@@ -120,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeighedShufflerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShufflerTest.java">
+      <file leaf-file-name="LinedFile.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="191">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -135,8 +92,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -147,6 +104,7 @@
       <find>pow</find>
       <find>random</find>
       <find>next</find>
+      <find>==0</find>
     </findStrings>
     <replaceStrings>
       <replace>weight</replace>
@@ -180,14 +138,15 @@
         <option value="$PROJECT_DIR$/../../../咕咕咕.CSV" />
         <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/ListItem.java" />
         <option value="$PROJECT_DIR$/../../../NameList.txt" />
-        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java" />
         <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/EventRW.java" />
-        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShufflerTest.java" />
-        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt" />
         <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Shuffler.java" />
         <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/resource/Resource.java" />
-        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java" />
+        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Divider.kt" />
+        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShufflerTest.java" />
+        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt" />
         <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java" />
+        <option value="$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java" />
       </list>
     </option>
   </component>
@@ -198,8 +157,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-156" />
+    <option name="y" value="-10" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -222,8 +181,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -328,7 +285,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -338,6 +297,10 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="Math&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Math.java&#10;Math.&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/Math.java" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="randomer" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -503,11 +466,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -515,11 +477,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32208923" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16577825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1673774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -531,6 +492,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -544,20 +506,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/EventRW.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -579,10 +527,12 @@
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
+            <element signature="e#2541#2703#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#3205#3206#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3303#3304#0" expanded="true" />
+            <element signature="e#3343#3344#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -629,10 +579,12 @@
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
+            <element signature="e#2541#2703#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#3205#3206#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3303#3304#0" expanded="true" />
+            <element signature="e#3343#3344#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -694,10 +646,12 @@
           <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
+            <element signature="e#2541#2703#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#3205#3206#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3303#3304#0" expanded="true" />
+            <element signature="e#3343#3344#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -820,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/ListItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2018-09-20_Randomer.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2166">
@@ -849,18 +796,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/EventRW.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="60" lean-forward="false" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/FileWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShufflerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Divider.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Shuffler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -873,61 +844,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/ListItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#194#195#0" expanded="false" />
+            <element signature="e#226#227#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShuffler.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="-587">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="e#54#108#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="82" column="29" lean-forward="true" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
-          <folding>
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/WeighedShufflerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/Shuffler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/gui/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+        <state relative-caret-position="275">
+          <caret line="65" column="32" lean-forward="false" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3115#3116#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
+            <element signature="e#2541#2703#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#3205#3206#0" expanded="true" />
+            <element signature="e#3236#3237#0" expanded="true" />
+            <element signature="e#3303#3304#0" expanded="true" />
+            <element signature="e#3343#3344#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/method/FileWriter.java">
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/RandomerLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="422">
+          <caret line="49" column="139" lean-forward="false" selection-start-line="49" selection-start-column="139" selection-end-line="49" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/studio/visualdust/product/Randomer/structure/LinedFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>
