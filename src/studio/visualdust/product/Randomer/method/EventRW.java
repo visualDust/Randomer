@@ -16,7 +16,7 @@ public class EventRW {
         try {
             logstream = new FileOutputStream(logoutfile, true);
             logstream.write(("").getBytes());
-            logstream.write(("> " + LocalDateTime.now().toString() + " Exception : " + e.toString() + "\r\n").getBytes());
+            logstream.write(("> " + LocalDateTime.now().toString() + " Exception : " + e.toString() + "\r\n\r\n").getBytes());
             logstream.write(("").getBytes());
         } catch (Exception e1) {
             System.out.println(e1.toString());
