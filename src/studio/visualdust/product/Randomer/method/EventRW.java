@@ -29,7 +29,7 @@ public class EventRW {
     public static void Write(String event) {
         try {
             logstream = new FileOutputStream(logoutfile, true);
-            logstream.write((LocalDateTime.now().toString() + " Event : " + event + "\r\n").getBytes());
+            logstream.write((LocalDateTime.now().toString() + " Event : " + event + "  \r\n").getBytes());
         } catch (Exception e1) {
             System.out.println(e1.toString());
             e1.printStackTrace();
@@ -40,7 +40,7 @@ public class EventRW {
     public static void WriteStrOnly(String string) {
         try {
             logstream = new FileOutputStream(logoutfile, true);
-            logstream.write(string.getBytes());
+            logstream.write((string+"  \r\n").getBytes());
         } catch (Exception e1) {
             System.out.println(e1.toString());
             e1.printStackTrace();
