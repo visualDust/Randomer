@@ -1,5 +1,7 @@
 package studio.visualdust.product.Randomer.structure;
 
+import java.util.Objects;
+
 public class ListItem {
     private String name;
     private int key = 0;
@@ -27,6 +29,31 @@ public class ListItem {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "ListItem{" +
+                "name='" + name + '\'' +
+                ", key=" + key +
+                ", weight=" + weight +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ListItem listItem = (ListItem) o;
+        return key == listItem.key &&
+                Double.compare(listItem.weight, weight) == 0 &&
+                Objects.equals(name, listItem.name);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(name, key, weight);
     }
 
     public double getWeight() {

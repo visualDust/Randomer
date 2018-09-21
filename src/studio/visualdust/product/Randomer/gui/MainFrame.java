@@ -14,8 +14,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class MainFrame extends JFrame {
-    static int WIDTH = 600;
-    static int HEIGHT = 400;
+    static int WIDTH = 900;
+    static int HEIGHT = 576;
 
     JFrame me = this;
 
@@ -34,7 +34,7 @@ public class MainFrame extends JFrame {
 
         display.setLocation(0, 0);
         display.setSize(WIDTH, HEIGHT - 50);
-        display.setFont(new Font("等线", 0, 100));
+        display.setFont(new Font("等线", 0, 150));
         this.add(display);
 
         exitButton.SetSize(new Dimension(WIDTH / 2, 50));
@@ -69,10 +69,9 @@ public class MainFrame extends JFrame {
         this.add(nextButton);
 
         JLabel versionLabel = new JLabel(Resource.softName + Resource.version + " By " + Resource.author, JLabel.LEFT);
-        versionLabel.setFont(new Font("等线", 0, 15));
-        versionLabel.setForeground(new Color(200, 200, 200));
-        versionLabel.setForeground(new Color(200, 200, 200));
-        versionLabel.setSize(WIDTH, 15);
+        versionLabel.setFont(new Font("等线", 0, 20));
+        versionLabel.setForeground(new Color(222, 222, 222));
+        versionLabel.setSize(WIDTH, 20);
         versionLabel.setLocation(0, 0);
         this.add(versionLabel);
     }
