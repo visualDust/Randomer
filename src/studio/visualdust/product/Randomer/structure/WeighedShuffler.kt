@@ -13,8 +13,6 @@ open class WeighedShuffler<T>(list: List<T>,
     private val weightRange: DoubleArray
     private val weightSum: Double
 
-    private val weight: DoubleArray = Arrays.copyOf(weight, weight.size)
-
     private val random = Random()
 
     init {
