@@ -43,14 +43,7 @@ public class RandomerLauncher {
                     EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
                     System.exit(255);
                 }
-                LinedFile linedFile = new LinedFile(file);
-                final int len = (int) linedFile.getLineCount();
-                double[] weights = new double[len];
-                for (int i = 0; i < linedFile.getLineCount(); i++) {
-                    collection.add(new ListItem(linedFile.getLineOn(i).split(",")[0]));
-                    weights[i] = linedFile.getLineOn(i).split(",").length >= 2 ? Double.valueOf(linedFile.getLineOn(i).split(",")[1]) : 1.0;
-                }
-                mainFrame.setShuffler(new WeighedShuffler<>(collection, weights));
+                mainFrame.RefreshList(file);
                 mainFrame.setVisible(true);
             }
         });

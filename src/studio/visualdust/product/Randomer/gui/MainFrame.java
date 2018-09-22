@@ -2,6 +2,7 @@ package studio.visualdust.product.Randomer.gui;
 
 import studio.visualdust.product.Randomer.method.EventRW;
 import studio.visualdust.product.Randomer.resource.Resource;
+import studio.visualdust.product.Randomer.structure.LinedFile;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.Shuffler;
 import studio.visualdust.product.Randomer.structure.WeighedShuffler;
@@ -10,12 +11,17 @@ import studio.visualdust.product.gztwigets.GMessageWindow;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.File;
+import java.util.ArrayList;
 
 public class MainFrame extends JFrame {
     static int WIDTH = 900;
     static int HEIGHT = 576;
+    File file;
 
     JFrame me = this;
 
@@ -23,6 +29,7 @@ public class MainFrame extends JFrame {
     JLabel display = new JLabel("-- --", JLabel.CENTER);
     GButton nextButton = new GButton("下一个");
     GButton exitButton = new GButton("退出");
+    GButton refreshButton = new GButton("重载列表");
 
     public MainFrame(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
@@ -37,7 +44,7 @@ public class MainFrame extends JFrame {
         display.setFont(new Font("等线", 0, 150));
         this.add(display);
 
-        exitButton.SetSize(new Dimension(WIDTH / 2, 50));
+        exitButton.SetSize(new Dimension(WIDTH / 3, 50));
         exitButton.setLocation(0, HEIGHT - 50);
         exitButton.SetBackColor(new Color(169, 30, 0));
         exitButton.SetForeColor(new Color(255, 255, 255));
@@ -56,8 +63,18 @@ public class MainFrame extends JFrame {
         });
         this.add(exitButton);
 
-        nextButton.SetSize(new Dimension(WIDTH / 2, 50));
-        nextButton.setLocation(WIDTH / 2, HEIGHT - 50);
+        refreshButton.SetSize(new Dimension(WIDTH / 3, 50));
+        refreshButton.setLocation(WIDTH / 3, HEIGHT - 50);
+        refreshButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                RefreshList(file);
+            }
+        });
+        this.add(refreshButton);
+
+        nextButton.SetSize(new Dimension(WIDTH / 3, 50));
+        nextButton.setLocation(refreshButton.getLocation().x + WIDTH / 3, HEIGHT - 50);
         nextButton.SetBackColor(new Color(6, 155, 0));
         nextButton.SetForeColor(new Color(255, 255, 255));
         nextButton.addMouseListener(new MouseAdapter() {
@@ -103,5 +120,23 @@ public class MainFrame extends JFrame {
             EventRW.Write("New random created : " + name);
             System.gc();
         }
+    }
+
+    public void RefreshList(File f) {
+        this.file = f;
+        ArrayList<ListItem> collection = new ArrayList<>();
+        if (!f.isFile() || !f.exists()) {
+            EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
+            System.exit(255);
+        }
+        LinedFile linedFile = new LinedFile(f);
+        final int len = (int) linedFile.getLineCount();
+        double[] weights = new double[len];
+        for (int i = 0; i < linedFile.getLineCount(); i++) {
+            collection.add(new ListItem(linedFile.getLineOn(i).split(",")[0]));
+            weights[i] = linedFile.getLineOn(i).split(",").length >= 2 ? Double.valueOf(linedFile.getLineOn(i).split(",")[1]) : 1.0;
+        }
+        this.setShuffler(new WeighedShuffler<>(collection, weights));
+        EventRW.Write("List Refreshed");
     }
 }
