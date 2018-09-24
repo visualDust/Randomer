@@ -30,6 +30,7 @@ public class MainFrame extends JFrame {
     GButton nextButton = new GButton("下一个");
     GButton exitButton = new GButton("退出");
     GButton refreshButton = new GButton("重载列表");
+    GButton moreButton = new GButton("...");
 
     public MainFrame(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
@@ -44,7 +45,7 @@ public class MainFrame extends JFrame {
         display.setFont(new Font("等线", 0, 150));
         this.add(display);
 
-        exitButton.SetSize(new Dimension(WIDTH / 3, 50));
+        exitButton.SetSize(new Dimension(WIDTH / 2, 50));
         exitButton.setLocation(0, HEIGHT - 50);
         exitButton.SetBackColor(new Color(169, 30, 0));
         exitButton.SetForeColor(new Color(255, 255, 255));
@@ -63,18 +64,8 @@ public class MainFrame extends JFrame {
         });
         this.add(exitButton);
 
-        refreshButton.SetSize(new Dimension(WIDTH / 3, 50));
-        refreshButton.setLocation(WIDTH / 3, HEIGHT - 50);
-        refreshButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                RefreshList(file);
-            }
-        });
-        this.add(refreshButton);
-
-        nextButton.SetSize(new Dimension(WIDTH / 3, 50));
-        nextButton.setLocation(refreshButton.getLocation().x + WIDTH / 3, HEIGHT - 50);
+        nextButton.SetSize(new Dimension(WIDTH / 2, 50));
+        nextButton.setLocation(exitButton.getX() + WIDTH / 2, HEIGHT - 50);
         nextButton.SetBackColor(new Color(6, 155, 0));
         nextButton.SetForeColor(new Color(255, 255, 255));
         nextButton.addMouseListener(new MouseAdapter() {
@@ -84,6 +75,36 @@ public class MainFrame extends JFrame {
             }
         });
         this.add(nextButton);
+
+        JLabel moreLabel = new JLabel();
+        moreLabel.setSize(WIDTH / 4, HEIGHT - 50);
+        moreLabel.setLocation(WIDTH, 0);
+        moreLabel.setBackground(new Color(222, 222, 222));
+        this.add(moreLabel);
+
+        refreshButton.SetSize(new Dimension(WIDTH / 4, 50));
+        refreshButton.setLocation(WIDTH, HEIGHT - 50);
+        refreshButton.SetBackColor(new Color(222, 171, 0));
+        refreshButton.SetForeColor(new Color(255, 255, 255));
+        refreshButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                RefreshList(file);
+            }
+        });
+        this.add(refreshButton);
+        //
+
+        moreButton.SetSize(new Dimension(20, 100));
+        moreButton.setLocation(WIDTH - 20, (HEIGHT - 100 - 50) / 2);
+        moreButton.SetText("|");
+        moreButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                me.setSize(me.getWidth() == WIDTH + WIDTH / 4 ? WIDTH : WIDTH + WIDTH / 4, HEIGHT);
+            }
+        });
+        this.add(moreButton);
 
         JLabel versionLabel = new JLabel(Resource.softName + Resource.version + " By " + Resource.author, JLabel.LEFT);
         versionLabel.setFont(new Font("等线", 0, 20));
