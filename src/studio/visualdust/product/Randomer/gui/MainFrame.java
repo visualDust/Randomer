@@ -174,6 +174,7 @@ public class MainFrame extends JFrame {
                     recounterLabel.setText("没有更多");
                     return;
                 }
+                EventRW.Write("User choosed \'true\' for " + newListItem.getName());
                 recounterLabel.setText(newListItem.getName());
                 passedLabel.setText(recounter.getPassCount() + " : 通过");
                 ratioLabel.setText(Integer.valueOf(recounter.getPassCount() * 100 / recounter.getSize()) + "% : 通过率");
@@ -188,6 +189,7 @@ public class MainFrame extends JFrame {
                     recounterLabel.setText("没有更多");
                     return;
                 }
+                EventRW.Write("User choosed \'false\' for " + newListItem.getName());
                 recounterLabel.setText(newListItem.getName());
                 passedLabel.setText(recounter.getPassCount() + " : 通过");
                 ratioLabel.setText(Integer.valueOf(recounter.getPassCount() * 100 / recounter.getSize()) + "% : 通过率");
@@ -197,6 +199,7 @@ public class MainFrame extends JFrame {
         recounterButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                EventRW.Write("Inited Recounter , " + ListItemVec.size() + " Items in total");
                 setRecounter(new Recounter<>(ListItemVec));
                 recounterLabel.setText("----");
                 totleLabel.setText(recounter.getSize() + " : 总数");
