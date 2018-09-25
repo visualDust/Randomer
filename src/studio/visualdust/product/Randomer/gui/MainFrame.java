@@ -32,6 +32,9 @@ public class MainFrame extends JFrame {
     private JLabel totleLabel = new JLabel("---总数", JLabel.CENTER);
     private JLabel passedLabel = new JLabel("---通过数", JLabel.CENTER);
     private JLabel ratioLabel = new JLabel("---通过率", JLabel.CENTER);
+    public GButton refreshButton = new GButton("重载列表");
+
+    private JLabel tipLabel = new JLabel("", JLabel.CENTER);
 
     public MainFrame(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
@@ -44,6 +47,7 @@ public class MainFrame extends JFrame {
         display.setLocation(0, 0);
         display.setSize(WIDTH, HEIGHT - 50);
         display.setFont(new Font("等线", 0, 150));
+        display.setForeground(new Color(50, 50, 50));
         this.add(display);
 
         GButton exitButton = new GButton("退出");
@@ -86,7 +90,7 @@ public class MainFrame extends JFrame {
         moreButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                (new windWipper(me.getWidth() == WIDTH + WIDTH / 4 ? WIDTH : WIDTH + WIDTH / 4)).start();
+                (new WindWipper(me.getWidth() == WIDTH + WIDTH / 4 ? WIDTH : WIDTH + WIDTH / 4)).start();
             }
         });
         this.add(moreButton);
@@ -98,7 +102,6 @@ public class MainFrame extends JFrame {
         versionLabel.setLocation(0, 0);
         this.add(versionLabel);
 
-        GButton refreshButton = new GButton("重载列表");
         refreshButton.SetSize(new Dimension(WIDTH / 4, 50));
         refreshButton.setLocation(WIDTH, HEIGHT - 50);
         refreshButton.SetBackColor(new Color(222, 171, 0));
@@ -107,12 +110,18 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseClicked(MouseEvent e) {
                 RefreshList(file);
-                display.setText("列表重载");
+                (new Tipper("列表已刷新", 111, 2000)).start();
             }
         });
         this.add(refreshButton);
 
-        GButton recounterButton = new GButton("新建唱票基");
+        tipLabel.setFont(new Font("等线", 0, 20));
+        tipLabel.setForeground(new Color(111, 111, 111));
+        tipLabel.setLocation(WIDTH, HEIGHT - 50);
+        tipLabel.setSize(new Dimension(WIDTH / 4, 50));
+        this.add(tipLabel);
+
+        GButton recounterButton = new GButton("新建/重置唱票基");
         recounterButton.setLocation(WIDTH, 0);
         recounterButton.SetSize(new Dimension(WIDTH / 4, 50));
         this.add(recounterButton);
@@ -120,6 +129,7 @@ public class MainFrame extends JFrame {
         recounterLabel.setFont(new Font("等线", 0, 40));
         recounterLabel.setLocation(WIDTH, 50);
         recounterLabel.setSize(WIDTH / 4, 100);
+        recounterLabel.setForeground(new Color(50, 50, 50));
         this.add(recounterLabel);
 
         GButton trueButton = new GButton("咕");
@@ -213,10 +223,44 @@ public class MainFrame extends JFrame {
         this.recounter = recounter;
     }
 
-    class windWipper extends Thread {
+    class Tipper extends Thread {
+
+        int colorDeep = 111;
+        int remainTime;
+
+        Tipper(String s, int colorDeep, int remainTime) {
+            tipLabel.setText(s);
+            this.colorDeep = colorDeep;
+            this.remainTime = remainTime;
+            this.start();
+        }
+
+        @Override
+        public void run() {
+            tipLabel.setVisible(true);
+            refreshButton.setVisible(false);
+            try {
+                for (int i = 255; i >= colorDeep; i--) {
+                    tipLabel.setForeground(new Color(i, i, i));
+                    sleep(1);
+                }
+                sleep(remainTime);
+                for (int i = colorDeep; i <= 255; i++) {
+                    tipLabel.setForeground(new Color(i, i, i));
+                    sleep(1);
+                }
+            } catch (Exception e) {
+                EventRW.Write(e);
+            }
+            refreshButton.setVisible(true);
+            tipLabel.setVisible(false);
+        }
+    }
+
+    class WindWipper extends Thread {
         int width;
 
-        windWipper(int width) {
+        WindWipper(int width) {
             this.width = width;
         }
 
@@ -262,6 +306,7 @@ public class MainFrame extends JFrame {
     public void RefreshList(File f) {
         this.file = f;
         ArrayList<ListItem> collection = new ArrayList<>();
+        ListItemVec.removeAllElements();
         if (!f.isFile() || !f.exists()) {
             EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
             System.exit(255);
