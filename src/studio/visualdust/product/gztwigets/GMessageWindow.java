@@ -111,6 +111,14 @@ public class GMessageWindow extends JDialog {
         return state;
     }
 
+    public void setText(String s) {
+        textField.setText(s);
+    }
+
+    public void setWaring(boolean b) {
+        textField.SetTipColor(b ? new Color(159, 8, 0) : textField.PRE_PANEL_COLOR);
+    }
+
     public String getText() {
         return textField.getText();
     }

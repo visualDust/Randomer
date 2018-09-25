@@ -37,14 +37,17 @@ public class RandomerLauncher {
         messageWindow.okButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                messageWindow.setWaring(false);
                 ArrayList<ListItem> collection = new ArrayList<>();
                 File file = new File(stripQuotes(messageWindow.getText()));
                 if (!file.isFile() || !file.exists()) {
-                    EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
-                    System.exit(255);
+                    messageWindow.setVisible(true);
+                    messageWindow.setText("File not enabled !!!");
+                    messageWindow.setWaring(true);
+                } else {
+                    mainFrame.RefreshList(file);
+                    mainFrame.setVisible(true);
                 }
-                mainFrame.RefreshList(file);
-                mainFrame.setVisible(true);
             }
         });
 
