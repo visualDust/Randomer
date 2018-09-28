@@ -133,8 +133,9 @@ public class MainFrame extends JFrame {
         final int len = (int) linedFile.getLineCount();
         double[] weights = new double[len];
         for (int i = 0; i < linedFile.getLineCount(); i++) {
-            collection.add(new ListItem(linedFile.getLineOn(i).split(",")[0]));
-            weights[i] = linedFile.getLineOn(i).split(",").length >= 2 ? Double.valueOf(linedFile.getLineOn(i).split(",")[1]) : 1.0;
+            String[] split = linedFile.getLineOn(i).split(",");
+            collection.add(new ListItem(split[0]));
+            weights[i] = split.length >= 2 ? Double.valueOf(split[1]) : 1.0;
         }
         this.setShuffler(new WeighedShuffler<>(collection, weights));
         EventRW.Write("List Refreshed");
