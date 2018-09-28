@@ -3,6 +3,10 @@ package studio.visualdust.product.Randomer;
 import studio.visualdust.product.Randomer.gui.MainFrame;
 import studio.visualdust.product.Randomer.method.EventRW;
 import studio.visualdust.product.Randomer.structure.ListItem;
+import studio.visualdust.product.Randomer.structure.LinedFile;
+import studio.visualdust.product.Randomer.structure.ListItem;
+import studio.visualdust.product.Randomer.structure.Shuffler;
+import studio.visualdust.product.Randomer.structure.WeighedShuffler;
 import studio.visualdust.product.gztwigets.GMessageWindow;
 
 import javax.swing.*;
@@ -34,14 +38,17 @@ public class RandomerLauncher {
         messageWindow.okButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                messageWindow.setWaring(false);
                 ArrayList<ListItem> collection = new ArrayList<>();
                 File file = new File(stripQuotes(messageWindow.getText()));
                 if (!file.isFile() || !file.exists()) {
-                    EventRW.Write(new Exception("Studio.VisualDust.Product.Exception.FileNotEnabledException"));
-                    System.exit(255);
+                    messageWindow.setVisible(true);
+                    messageWindow.setText("File not enabled !!!");
+                    messageWindow.setWaring(true);
+                } else {
+                    mainFrame.RefreshList(file);
+                    mainFrame.setVisible(true);
                 }
-                mainFrame.RefreshList(file);
-                mainFrame.setVisible(true);
             }
         });
 

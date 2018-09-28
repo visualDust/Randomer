@@ -42,4 +42,8 @@ public class GTextField extends JPanel {
     public String getText() {
         return textField.getText();
     }
+
+    public void setText(String s) {
+        textField.setText(s);
+    }
 }
