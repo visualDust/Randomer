@@ -2,6 +2,7 @@ package studio.visualdust.product.Randomer;
 
 import studio.visualdust.product.Randomer.gui.MainFrame;
 import studio.visualdust.product.Randomer.method.EventRW;
+import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.LinedFile;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.Shuffler;
@@ -70,7 +71,7 @@ public class RandomerLauncher {
         EventRW.Write("Randomer Launched");
     }
 
-    public static Font defaultFont = new Font("等线", 0, 17);
+    public static Font defaultFont = new Font("等线", Font.PLAIN, 17);
 
     public static void ResetFonts() {
 
@@ -88,12 +89,13 @@ public class RandomerLauncher {
     }
 
     private static String stripQuotes(String s) {
+        final int size = s.length();
         int begin = 0;
-        int end = s.length();
-        while (s.charAt(begin) == '"') {
+        int end = size;
+        while (begin < size && s.charAt(begin) == '"') {
             begin++;
         }
-        while (s.charAt(end - 1) == '"') {
+        while (end > 0 && s.charAt(end - 1) == '"') {
             end--;
         }
         return s.substring(begin, end);
