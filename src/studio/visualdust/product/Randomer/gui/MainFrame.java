@@ -19,6 +19,7 @@ import java.util.Vector;
 public class MainFrame extends JFrame {
     private static int WIDTH = 900;
     private static int HEIGHT = 576;
+    private static final int DISPLAY_FONTSIZE = 150;
     private File file;
     private Recounter<ListItem> recounter = null;
     private WeighedShuffler<ListItem> shuffler;
@@ -46,7 +47,7 @@ public class MainFrame extends JFrame {
 
         display.setLocation(0, 0);
         display.setSize(WIDTH, HEIGHT - 50);
-        display.setFont(new Font("等线", 0, 150));
+        display.setFont(new Font("等线", 0, DISPLAY_FONTSIZE));
         display.setForeground(new Color(50, 50, 50));
         this.add(display);
 
@@ -291,9 +292,11 @@ public class MainFrame extends JFrame {
         @Override
         public void run() {
             try {
+                int fontSize = DISPLAY_FONTSIZE;
                 for (int i = 0; i < shuffler.getList().size(); i++) {
-                    if (i >= 15) break;
+                    if (i >= 20) break;
                     display.setText(shuffler.getList().get(i).getName());
+                    display.setFont(new Font("等线", 0, fontSize + i));
                     sleep(10);
                 }
             } catch (Exception e1) {
@@ -301,6 +304,15 @@ public class MainFrame extends JFrame {
             }
             String name = MainFrame.this.shuffler.next().getName();
             display.setText(name);
+            try {
+                int fontSize = DISPLAY_FONTSIZE;
+                for (int i = 0; i <= 20; i++) {
+                    sleep(2);
+                    display.setFont(new Font("等线", 0, fontSize - i));
+                }
+            } catch (Exception e) {
+                EventRW.Write(e);
+            }
             EventRW.Write("New random created : " + name);
 //            System.gc();
         }
