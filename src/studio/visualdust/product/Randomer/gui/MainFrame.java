@@ -47,17 +47,18 @@ public class MainFrame extends JFrame {
         this.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width / 2 - WIDTH / 2, Toolkit.getDefaultToolkit().getScreenSize().height / 2 - HEIGHT / 2);
 
         this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+
 //        this.setTitle(Resource.softName+Resource.version+" By "+Resource.author);
 
         display.setLocation(0, 0);
         display.setSize(WIDTH, HEIGHT - 50);
-        display.setFont(new Font("等线", 0, DISPLAY_FONTSIZE));
+        display.setFont(new Font("微软雅黑", 0, DISPLAY_FONTSIZE));
         display.setForeground(new Color(50, 50, 50));
         this.add(display);
 
         GButton exitButton = new GButton("退出");
         exitButton.SetSize(new Dimension(WIDTH / 2, 50));
-        exitButton.setLocation(0, HEIGHT - 70);
+        exitButton.setLocation(0, HEIGHT - 80);
         exitButton.SetBackColor(new Color(169, 30, 0));
         exitButton.SetForeColor(new Color(255, 255, 255));
         exitButton.addMouseListener(new MouseAdapter() {
@@ -77,7 +78,7 @@ public class MainFrame extends JFrame {
 
         GButton nextButton = new GButton("下一个");
         nextButton.SetSize(new Dimension(WIDTH / 2, 50));
-        nextButton.setLocation(exitButton.getX() + WIDTH / 2, HEIGHT - 70);
+        nextButton.setLocation(exitButton.getX() + WIDTH / 2, HEIGHT - 80);
         nextButton.SetBackColor(new Color(6, 155, 0));
         nextButton.SetForeColor(new Color(255, 255, 255));
         nextButton.addMouseListener(new MouseAdapter() {
@@ -90,7 +91,7 @@ public class MainFrame extends JFrame {
 
         GButton moreButton = new GButton("...");
         moreButton.SetSize(new Dimension(20, 100));
-        moreButton.setLocation(WIDTH - 25, (HEIGHT - 70 - 50) / 2);
+        moreButton.setLocation(WIDTH - 25, (HEIGHT - 80 - 50) / 2);
         moreButton.SetText("|");
         moreButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -101,14 +102,14 @@ public class MainFrame extends JFrame {
         this.add(moreButton);
 
         JLabel versionLabel = new JLabel(Resource.softName + Resource.version + " By " + Resource.author, JLabel.LEFT);
-        versionLabel.setFont(new Font("等线", 0, 20));
+        versionLabel.setFont(new Font("微软雅黑", 0, 20));
         versionLabel.setForeground(new Color(211, 211, 211));
         versionLabel.setSize(WIDTH, 20);
         versionLabel.setLocation(0, 0);
         this.add(versionLabel);
 
         refreshButton.SetSize(new Dimension(WIDTH / 4, 50));
-        refreshButton.setLocation(WIDTH, HEIGHT - 70);
+        refreshButton.setLocation(WIDTH, HEIGHT - 80);
         refreshButton.SetBackColor(new Color(222, 171, 0));
         refreshButton.SetForeColor(new Color(255, 255, 255));
         refreshButton.addMouseListener(new MouseAdapter() {
@@ -120,9 +121,9 @@ public class MainFrame extends JFrame {
         });
         this.add(refreshButton);
 
-        tipLabel.setFont(new Font("等线", 0, 20));
+        tipLabel.setFont(new Font("微软雅黑", 0, 20));
         tipLabel.setForeground(new Color(111, 111, 111));
-        tipLabel.setLocation(WIDTH, HEIGHT - 50);
+        tipLabel.setLocation(WIDTH, HEIGHT - 80);
         tipLabel.setSize(new Dimension(WIDTH / 4, 50));
         this.add(tipLabel);
 
@@ -131,7 +132,7 @@ public class MainFrame extends JFrame {
         recounterButton.SetSize(new Dimension(WIDTH / 4, 50));
         this.add(recounterButton);
 
-        recounterLabel.setFont(new Font("等线", 0, 40));
+        recounterLabel.setFont(new Font("微软雅黑", 0, 40));
         recounterLabel.setLocation(WIDTH, 50);
         recounterLabel.setSize(WIDTH / 4, 100);
         recounterLabel.setForeground(new Color(50, 50, 50));
@@ -153,19 +154,19 @@ public class MainFrame extends JFrame {
         falseButton.setVisible(false);
         this.add(falseButton);
 
-        totleLabel.setFont(new Font("等线", 0, 20));
+        totleLabel.setFont(new Font("微软雅黑", 0, 20));
         totleLabel.setLocation(WIDTH, 210);
         totleLabel.setSize(WIDTH / 4, 30);
         totleLabel.setVisible(false);
         this.add(totleLabel);
 
-        passedLabel.setFont(new Font("等线", 0, 20));
+        passedLabel.setFont(new Font("微软雅黑", 0, 20));
         passedLabel.setLocation(WIDTH, 240);
         passedLabel.setSize(WIDTH / 4, 30);
         passedLabel.setVisible(false);
         this.add(passedLabel);
 
-        ratioLabel.setFont(new Font("等线", 0, 20));
+        ratioLabel.setFont(new Font("微软雅黑", 0, 20));
         ratioLabel.setLocation(WIDTH, 270);
         ratioLabel.setSize(WIDTH / 4, 30);
         ratioLabel.setVisible(false);
@@ -300,7 +301,7 @@ public class MainFrame extends JFrame {
                 for (int i = 0; i < shuffler.getList().size(); i++) {
                     if (i >= 20) break;
                     display.setText(shuffler.getList().get(i).getName());
-                    display.setFont(new Font("等线", 0, fontSize + i));
+                    display.setFont(new Font("微软雅黑", 0, fontSize + i));
                     sleep(10);
                 }
             } catch (Exception e1) {
@@ -312,7 +313,7 @@ public class MainFrame extends JFrame {
                 int fontSize = DISPLAY_FONTSIZE;
                 for (int i = 0; i <= 20; i++) {
                     sleep(2);
-                    display.setFont(new Font("等线", 0, fontSize - i));
+                    display.setFont(new Font("微软雅黑", 0, fontSize - i));
                 }
             } catch (Exception e) {
                 EventRW.Write(e);

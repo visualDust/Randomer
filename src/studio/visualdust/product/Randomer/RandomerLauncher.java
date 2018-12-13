@@ -14,6 +14,8 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -41,7 +43,7 @@ public class RandomerLauncher {
             if (inThisDir.isFile() && inThisDir.exists()) {
                 mainFrame.RefreshList(inThisDir);
                 mainFrame.setVisible(true);
-                mainFrame.setTitle(inThisDir.getName());
+                mainFrame.setTitle("当前文件 : "+inThisDir.getName()+"   要是发现了使用问题可以来11班塞个小纸条我会抽空修复");
             }
         } else {
             GMessageWindow messageWindow = new GMessageWindow(rubbishFrame, 2, "请输入一个列表的路径");
@@ -57,6 +59,7 @@ public class RandomerLauncher {
                         messageWindow.setWaring(true);
                     } else {
                         mainFrame.RefreshList(file);
+                        mainFrame.setTitle("当前文件 : "+file.getName());
                         mainFrame.setVisible(true);
                     }
                 }
@@ -79,11 +82,17 @@ public class RandomerLauncher {
             });
         }
 
+        mainFrame.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                new GMessageWindow(mainFrame,0,"为了防止误触，请点击左下角的退出按钮退出。").setVisible(true);
+            }
+        });
 
         EventRW.Write("Randomer Launched");
     }
 
-    public static Font defaultFont = new Font("等线", Font.PLAIN, 17);
+    public static Font defaultFont = new Font("微软雅黑", Font.PLAIN, 17);
 
     public static void ResetFonts() {
 

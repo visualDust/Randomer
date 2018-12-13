@@ -3,7 +3,7 @@
 # 最近一次COMMIT
 
 COMMIT的时间
-2018年12月13日 19:24:39
+2018年12月13日 21:27:45
 ---
 > 是谁COMMIT
 
@@ -24,21 +24,16 @@ https://github.com/visualDust/Randomer.git
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	new file:   2018-12-13_Randomer.md
-	new file:   README.md
-	modified:   src/studio/visualdust/product/Randomer/RandomerLauncher.java
-	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
-	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
-
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   README.md
+	modified:   src/studio/visualdust/product/Randomer/RandomerLauncher.java
+	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
+	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
 
+no changes added to commit (use "git add" and/or "git commit -a")
 ---
 > 当前文件列表
 
@@ -88,9 +83,10 @@ StatusPanel$2.class  StatusPanel.class
 StatusPanel$3.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer:
-gui			  RandomerLauncher$2.class  resource
-method			  RandomerLauncher$3.class  structure
-RandomerLauncher$1.class  RandomerLauncher.class    WeighedShufflerTest.class
+gui			  RandomerLauncher$3.class  structure
+method			  RandomerLauncher$4.class  WeighedShufflerTest.class
+RandomerLauncher$1.class  RandomerLauncher.class
+RandomerLauncher$2.class  resource
 
 ./out/production/Randomer/studio/visualdust/product/Randomer/gui:
 MainFrame$1$1.class  MainFrame$4.class	MainFrame$Refresher.class
