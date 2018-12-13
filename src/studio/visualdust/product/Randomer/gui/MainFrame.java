@@ -40,10 +40,14 @@ public class MainFrame extends JFrame {
     public MainFrame(WeighedShuffler<ListItem> shuffler) {
         this.shuffler = shuffler;
         this.setLayout(null);
-        this.setUndecorated(true);
+        this.setUndecorated(false);
+        this.setResizable(false);
         this.getContentPane().setBackground(new Color(255, 255, 255));
         this.setSize(WIDTH, HEIGHT);
         this.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width / 2 - WIDTH / 2, Toolkit.getDefaultToolkit().getScreenSize().height / 2 - HEIGHT / 2);
+
+        this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+//        this.setTitle(Resource.softName+Resource.version+" By "+Resource.author);
 
         display.setLocation(0, 0);
         display.setSize(WIDTH, HEIGHT - 50);
@@ -53,7 +57,7 @@ public class MainFrame extends JFrame {
 
         GButton exitButton = new GButton("退出");
         exitButton.SetSize(new Dimension(WIDTH / 2, 50));
-        exitButton.setLocation(0, HEIGHT - 50);
+        exitButton.setLocation(0, HEIGHT - 70);
         exitButton.SetBackColor(new Color(169, 30, 0));
         exitButton.SetForeColor(new Color(255, 255, 255));
         exitButton.addMouseListener(new MouseAdapter() {
@@ -73,7 +77,7 @@ public class MainFrame extends JFrame {
 
         GButton nextButton = new GButton("下一个");
         nextButton.SetSize(new Dimension(WIDTH / 2, 50));
-        nextButton.setLocation(exitButton.getX() + WIDTH / 2, HEIGHT - 50);
+        nextButton.setLocation(exitButton.getX() + WIDTH / 2, HEIGHT - 70);
         nextButton.SetBackColor(new Color(6, 155, 0));
         nextButton.SetForeColor(new Color(255, 255, 255));
         nextButton.addMouseListener(new MouseAdapter() {
@@ -86,7 +90,7 @@ public class MainFrame extends JFrame {
 
         GButton moreButton = new GButton("...");
         moreButton.SetSize(new Dimension(20, 100));
-        moreButton.setLocation(WIDTH - 20, (HEIGHT - 100 - 50) / 2);
+        moreButton.setLocation(WIDTH - 25, (HEIGHT - 70 - 50) / 2);
         moreButton.SetText("|");
         moreButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -104,7 +108,7 @@ public class MainFrame extends JFrame {
         this.add(versionLabel);
 
         refreshButton.SetSize(new Dimension(WIDTH / 4, 50));
-        refreshButton.setLocation(WIDTH, HEIGHT - 50);
+        refreshButton.setLocation(WIDTH, HEIGHT - 70);
         refreshButton.SetBackColor(new Color(222, 171, 0));
         refreshButton.SetForeColor(new Color(255, 255, 255));
         refreshButton.addMouseListener(new MouseAdapter() {

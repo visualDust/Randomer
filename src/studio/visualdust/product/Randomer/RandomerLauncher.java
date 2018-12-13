@@ -34,39 +34,51 @@ public class RandomerLauncher {
         rubbishFrame.setSize(1, 1);
         rubbishFrame.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width / 2, Toolkit.getDefaultToolkit().getScreenSize().height / 2);
         rubbishFrame.setVisible(false);
-        GMessageWindow messageWindow = new GMessageWindow(rubbishFrame, 2, "请输入一个列表的路径");
-        messageWindow.okButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                messageWindow.setWaring(false);
-                ArrayList<ListItem> collection = new ArrayList<>();
-                File file = new File(stripQuotes(messageWindow.getText()));
-                if (!file.isFile() || !file.exists()) {
-                    messageWindow.setVisible(true);
-                    messageWindow.setText("File not enabled !!!");
-                    messageWindow.setWaring(true);
-                } else {
-                    mainFrame.RefreshList(file);
-                    mainFrame.setVisible(true);
+
+        if (args.length > 0) {
+            EventRW.Write("Open with default list : " + args[0]);
+            File inThisDir = new File(args[0]);
+            if (inThisDir.isFile() && inThisDir.exists()) {
+                mainFrame.RefreshList(inThisDir);
+                mainFrame.setVisible(true);
+                mainFrame.setTitle(inThisDir.getName());
+            }
+        } else {
+            GMessageWindow messageWindow = new GMessageWindow(rubbishFrame, 2, "请输入一个列表的路径");
+            messageWindow.okButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    messageWindow.setWaring(false);
+//                    ArrayList<ListItem> collection = new ArrayList<>();
+                    File file = new File(stripQuotes(messageWindow.getText()));
+                    if (!file.isFile() || !file.exists()) {
+                        messageWindow.setVisible(true);
+                        messageWindow.setText("File not enabled !!!");
+                        messageWindow.setWaring(true);
+                    } else {
+                        mainFrame.RefreshList(file);
+                        mainFrame.setVisible(true);
+                    }
                 }
-            }
-        });
+            });
 
-        messageWindow.cancelButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                EventRW.Write("User exited");
-                System.exit(0);
-            }
-        });
+            messageWindow.cancelButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    EventRW.Write("User exited");
+                    System.exit(0);
+                }
+            });
 
-        messageWindow.noButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                EventRW.Write("User exited");
-                System.exit(0);
-            }
-        });
+            messageWindow.noButton.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    EventRW.Write("User exited");
+                    System.exit(0);
+                }
+            });
+        }
+
 
         EventRW.Write("Randomer Launched");
     }
