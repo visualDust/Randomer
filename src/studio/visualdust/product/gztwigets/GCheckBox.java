@@ -6,16 +6,16 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class GCheckBox extends JPanel {
-    private Color DEFAULT_BG_COLOR = new Color(255, 255, 255);
-    private Color MOVINGPANEL_FG = new Color(255, 255, 255);
-    private Color GAIN_BG_COLOR = new Color(192, 192, 192);
-    private Color ON_COLOR = new Color(21, 188, 0);
-    private Color OFF_COLOR = new Color(177, 0, 3);
+    public Color DEFAULT_BG_COLOR = new Color(255, 255, 255);
+    public Color MOVINGPANEL_FG = new Color(255, 255, 255);
+    public Color GAIN_BG_COLOR = new Color(192, 192, 192);
+    public Color ON_COLOR = new Color(21, 188, 0);
+    public Color OFF_COLOR = new Color(177, 0, 3);
 
-    private int GAIN_WIDTH = 60;
-    private int GAIN_HEIGHT = 30;
+    public int GAIN_WIDTH = 60;
+    public int GAIN_HEIGHT = 30;
 
-    JLabel titleLabel = new JLabel("", JLabel.CENTER);
+    public JLabel titleLabel = new JLabel("", JLabel.CENTER);
     public JLabel listenerLabel = new JLabel();
     GStringPanel onGStrPanel = new GStringPanel("ON", MOVINGPANEL_FG);
     GStringPanel offGStrPanel = new GStringPanel("OFF", MOVINGPANEL_FG);
@@ -88,5 +88,14 @@ public class GCheckBox extends JPanel {
         offGStrPanel.setLocation(this.getWidth() - GAIN_WIDTH * 2, this.getHeight() / 2 - GAIN_HEIGHT / 2);
         listenerLabel.setSize(GAIN_WIDTH * 2, GAIN_HEIGHT);
         listenerLabel.setLocation(this.getWidth() - GAIN_WIDTH * 2, this.getHeight() / 2 - GAIN_HEIGHT / 2);
+    }
+
+    public void SetForeColor(Color color) {
+        titleLabel.setForeground(color);
+    }
+
+    public void SetBackColor(Color color) {
+        DEFAULT_BG_COLOR = color;
+        this.setBackground(color);
     }
 }

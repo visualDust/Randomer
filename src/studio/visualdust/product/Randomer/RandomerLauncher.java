@@ -1,7 +1,9 @@
 package studio.visualdust.product.Randomer;
 
+import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import studio.visualdust.product.Randomer.gui.MainFrame;
 import studio.visualdust.product.Randomer.method.EventRW;
+import studio.visualdust.product.Randomer.resource.Resource;
 import studio.visualdust.product.Randomer.structure.ListItem;
 import studio.visualdust.product.Randomer.structure.LinedFile;
 import studio.visualdust.product.Randomer.structure.ListItem;
@@ -24,7 +26,7 @@ public class RandomerLauncher {
 
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(new MetalLookAndFeel());
+            UIManager.setLookAndFeel(new WindowsLookAndFeel());
         } catch (Exception e) {
             EventRW.Write(e);
         }
@@ -37,19 +39,24 @@ public class RandomerLauncher {
         rubbishFrame.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width / 2, Toolkit.getDefaultToolkit().getScreenSize().height / 2);
         rubbishFrame.setVisible(false);
 
+        boolean check = false;
         if (args.length > 0) {
             EventRW.Write("Open with default list : " + args[0]);
             File inThisDir = new File(args[0]);
             if (inThisDir.isFile() && inThisDir.exists()) {
                 mainFrame.RefreshList(inThisDir);
+                mainFrame.shufflerRusher(1000);
                 mainFrame.setVisible(true);
-                mainFrame.setTitle("当前文件 : "+inThisDir.getName()+"   要是发现了使用问题可以来11班塞个小纸条我会抽空修复");
+                mainFrame.setTitle("当前文件 : " + inThisDir.getName() + "  - "+Resource.softName+Resource.version+" by "+Resource.author);
+                mainFrame.autoNext.start();
+                check = true;
             }
-        } else {
+        }
+        if (!check) {
             GMessageWindow messageWindow = new GMessageWindow(rubbishFrame, 2, "请输入一个列表的路径");
             messageWindow.okButton.addMouseListener(new MouseAdapter() {
                 @Override
-                public void mouseClicked(MouseEvent e) {
+                public void mousePressed(MouseEvent e) {
                     messageWindow.setWaring(false);
 //                    ArrayList<ListItem> collection = new ArrayList<>();
                     File file = new File(stripQuotes(messageWindow.getText()));
@@ -59,15 +66,17 @@ public class RandomerLauncher {
                         messageWindow.setWaring(true);
                     } else {
                         mainFrame.RefreshList(file);
-                        mainFrame.setTitle("当前文件 : "+file.getName());
+                        mainFrame.shufflerRusher(1000);
+                        mainFrame.setTitle("当前文件 : " + file.getName() + "  - "+Resource.softName+Resource.version+" by "+Resource.author);
                         mainFrame.setVisible(true);
+                        mainFrame.autoNext.start();
                     }
                 }
             });
 
             messageWindow.cancelButton.addMouseListener(new MouseAdapter() {
                 @Override
-                public void mouseClicked(MouseEvent e) {
+                public void mousePressed(MouseEvent e) {
                     EventRW.Write("User exited");
                     System.exit(0);
                 }
@@ -75,7 +84,7 @@ public class RandomerLauncher {
 
             messageWindow.noButton.addMouseListener(new MouseAdapter() {
                 @Override
-                public void mouseClicked(MouseEvent e) {
+                public void mousePressed(MouseEvent e) {
                     EventRW.Write("User exited");
                     System.exit(0);
                 }
@@ -85,7 +94,14 @@ public class RandomerLauncher {
         mainFrame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                new GMessageWindow(mainFrame,0,"为了防止误触，请点击左下角的退出按钮退出。").setVisible(true);
+                GMessageWindow messageWindow = new GMessageWindow(mainFrame, 1, "确定退出吗？");
+                messageWindow.okButton.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+                        EventRW.Write("User exited");
+                        System.exit(0);
+                    }
+                });
             }
         });
 

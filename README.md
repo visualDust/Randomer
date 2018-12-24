@@ -3,7 +3,7 @@
 # 最近一次COMMIT
 
 COMMIT的时间
-2018年12月13日 21:27:45
+2018年12月24日 21:40:59
 ---
 > 是谁COMMIT
 
@@ -24,23 +24,36 @@ https://github.com/visualDust/Randomer.git
 On branch master
 Your branch is up to date with 'origin/master'.
 
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    2018-09-26_Randomer.md
+	deleted:    2018-09-30_Randomer.md
+	deleted:    2018-12-13_Randomer.md
+	new file:   2018-12-24_Randomer.md
+	modified:   README.md
+	new file:   STENCIL.TTF
+	modified:   src/studio/visualdust/product/Randomer/RandomerLauncher.java
+	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
+	new file:   src/studio/visualdust/product/Randomer/method/Randomer.java
+	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
+	new file:   src/studio/visualdust/product/Randomer/structure/Achievement.java
+	new file:   src/studio/visualdust/product/Randomer/structure/ClickCounter.java
+	new file:   src/studio/visualdust/product/TestClass.java
+	modified:   src/studio/visualdust/product/gztwigets/GCheckBox.java
+
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
 	modified:   README.md
-	modified:   src/studio/visualdust/product/Randomer/RandomerLauncher.java
-	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
-	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
 
-no changes added to commit (use "git add" and/or "git commit -a")
 ---
 > 当前文件列表
 
 ```
 .:
-2018-09-26_Randomer.md	2018-12-13_Randomer.md	out	      README.md
-2018-09-30_Randomer.md	LICENSE			Randomer.iml  src
+2018-12-24_Randomer.md	LICENSE  out  Randomer.iml  README.md  src  STENCIL.TTF
 
 ./out:
 artifacts  production
@@ -67,7 +80,7 @@ visualdust
 product
 
 ./out/production/Randomer/studio/visualdust/product:
-gztwigets  Randomer
+gztwigets  Randomer  TestClass.class
 
 ./out/production/Randomer/studio/visualdust/product/gztwigets:
 GButton$1.class      GIntSpinner$3.class     GStringPanel.class
@@ -83,26 +96,32 @@ StatusPanel$2.class  StatusPanel.class
 StatusPanel$3.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer:
-gui			  RandomerLauncher$3.class  structure
-method			  RandomerLauncher$4.class  WeighedShufflerTest.class
-RandomerLauncher$1.class  RandomerLauncher.class
-RandomerLauncher$2.class  resource
+gui			  RandomerLauncher$3.class    resource
+method			  RandomerLauncher$4$1.class  structure
+RandomerLauncher$1.class  RandomerLauncher$4.class    WeighedShufflerTest.class
+RandomerLauncher$2.class  RandomerLauncher.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer/gui:
-MainFrame$1$1.class  MainFrame$4.class	MainFrame$Refresher.class
-MainFrame$1.class    MainFrame$5.class	MainFrame$Tipper.class
-MainFrame$2.class    MainFrame$6.class	MainFrame$WindWipper.class
-MainFrame$3.class    MainFrame$7.class	MainFrame.class
+MainFrame$1.class    MainFrame$5.class		 MainFrame$FGSlapper.class
+MainFrame$10.class   MainFrame$6.class		 MainFrame$Refresher.class
+MainFrame$11.class   MainFrame$7.class		 MainFrame$timer.class
+MainFrame$2$1.class  MainFrame$8.class		 MainFrame$Tipper.class
+MainFrame$2.class    MainFrame$9.class		 MainFrame$WindWipper.class
+MainFrame$3$1.class  MainFrame$achiRotate.class  MainFrame.class
+MainFrame$3.class    MainFrame$AutoNext.class
+MainFrame$4.class    MainFrame$BGSlapper.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer/method:
-EventRW.class  FileWriter.class
+EventRW.class  FileWriter.class  Randomer.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer/resource:
 Resource.class
 
 ./out/production/Randomer/studio/visualdust/product/Randomer/structure:
-LinedFile$ReaderThread.class  ListItem.class   Shuffler.class
-LinedFile.class		      Recounter.class  WeighedShuffler.class
+Achievement.class	    ClickCounter.class		  Recounter.class
+ClickCounter$1.class	    LinedFile$ReaderThread.class  Shuffler.class
+ClickCounter$Clocker.class  LinedFile.class		  WeighedShuffler.class
+ClickCounter$Reducer.class  ListItem.class
 
 ./src:
 META-INF  studio
@@ -117,7 +136,7 @@ visualdust
 product
 
 ./src/studio/visualdust/product:
-gztwigets  Randomer
+gztwigets  Randomer  TestClass.java
 
 ./src/studio/visualdust/product/gztwigets:
 GButton.java	GIntSpinner.java     GStringPanel.java	GTheme.java
@@ -134,14 +153,14 @@ method	resource	       WeighedShufflerTest.java
 MainFrame.java
 
 ./src/studio/visualdust/product/Randomer/method:
-EventRW.java  FileWriter.java
+EventRW.java  FileWriter.java  Randomer.java
 
 ./src/studio/visualdust/product/Randomer/resource:
 Resource.java
 
 ./src/studio/visualdust/product/Randomer/structure:
-LinedFile.java	Recounter.java	WeighedShuffler.kt
-ListItem.java	Shuffler.java
+Achievement.java   LinedFile.java  Recounter.java  WeighedShuffler.kt
+ClickCounter.java  ListItem.java   Shuffler.java
 ```
 
 Auto commit by VisualDust
