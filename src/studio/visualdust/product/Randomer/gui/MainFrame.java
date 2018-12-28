@@ -28,7 +28,7 @@ public class MainFrame extends JFrame {
     private JFrame me = this;
     public JLabel display = new JLabel("-- --", JLabel.CENTER);
 
-    Resource resource = new Resource();
+    public Resource resource = new Resource();
 
     private JLabel recounterLabel = new JLabel("----", JLabel.CENTER);
     private JLabel totleLabel = new JLabel("---总数", JLabel.CENTER);
@@ -151,7 +151,7 @@ public class MainFrame extends JFrame {
         aboutButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                resource.aboutDialog.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width/2-resource.aboutDialog.getWidth()/2,Toolkit.getDefaultToolkit().getScreenSize().height/2-resource.aboutDialog.getHeight()/2);
+                resource.aboutDialog.setLocation(Toolkit.getDefaultToolkit().getScreenSize().width / 2 - resource.aboutDialog.getWidth() / 2, Toolkit.getDefaultToolkit().getScreenSize().height / 2 - resource.aboutDialog.getHeight() / 2);
                 resource.aboutDialog.setVisible(true);
             }
         });
@@ -208,8 +208,8 @@ public class MainFrame extends JFrame {
         this.add(refreshButton);
 
         speedLabel.setFont(new Font("Stencil", 0, 50));
-        speedLabel.setLocation(20, aboutButton.getY() - 120);
-        speedLabel.setSize(400, 100);
+        speedLabel.setLocation(0, aboutButton.getY() - 120);
+        speedLabel.setSize(WIDTH - 20, 100);
         this.add(speedLabel);
 
         tipLabel.setFont(new Font("微软雅黑", 0, 20));
@@ -401,7 +401,9 @@ public class MainFrame extends JFrame {
             }
             ListItem item = MainFrame.this.shuffler.next();
             weightDisplay.setText(String.valueOf(item.getWeight()));
-            display.setText(item.getName());
+            if (display.getFont().getSize() != DISPLAY_FONTSIZE)
+                display.setFont(new Font("微软雅黑", 0, DISPLAY_FONTSIZE));
+                        display.setText(item.getName());
             try {
                 int fontSize = DISPLAY_FONTSIZE;
                 for (int i = 0; i <= 20; i++) {
@@ -411,6 +413,8 @@ public class MainFrame extends JFrame {
             } catch (Exception e) {
                 EventRW.Write(e);
             }
+            if (item.getName().length() * DISPLAY_FONTSIZE >= WIDTH - 50)
+                display.setFont(new Font("微软雅黑", 0, (WIDTH - 50) / item.getName().length()));
             EventRW.Write("New random created : " + item.getName());
 //            System.gc();
         }

@@ -3,7 +3,7 @@
 # 最近一次COMMIT
 
 COMMIT的时间
-2018年12月24日 21:40:59
+2018年12月28日 16:16:26
 ---
 > 是谁COMMIT
 
@@ -22,38 +22,27 @@ https://github.com/visualDust/Randomer.git
 > COMMIT的细节
 
 On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	deleted:    2018-09-26_Randomer.md
-	deleted:    2018-09-30_Randomer.md
-	deleted:    2018-12-13_Randomer.md
-	new file:   2018-12-24_Randomer.md
-	modified:   README.md
-	new file:   STENCIL.TTF
-	modified:   src/studio/visualdust/product/Randomer/RandomerLauncher.java
-	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
-	new file:   src/studio/visualdust/product/Randomer/method/Randomer.java
-	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
-	new file:   src/studio/visualdust/product/Randomer/structure/Achievement.java
-	new file:   src/studio/visualdust/product/Randomer/structure/ClickCounter.java
-	new file:   src/studio/visualdust/product/TestClass.java
-	modified:   src/studio/visualdust/product/gztwigets/GCheckBox.java
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
 Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
+  (use "git add/rm <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
+	deleted:    2018-12-24_Randomer.md
 	modified:   README.md
+	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
+	modified:   src/studio/visualdust/product/Randomer/method/Randomer.java
+	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
+	modified:   src/studio/visualdust/product/Randomer/structure/ClickCounter.java
 
+no changes added to commit (use "git add" and/or "git commit -a")
 ---
 > 当前文件列表
 
 ```
 .:
-2018-12-24_Randomer.md	LICENSE  out  Randomer.iml  README.md  src  STENCIL.TTF
+LICENSE  out  Randomer.iml  README.md  src  STENCIL.TTF
 
 ./out:
 artifacts  production

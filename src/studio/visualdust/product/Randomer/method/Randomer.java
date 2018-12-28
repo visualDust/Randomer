@@ -4,7 +4,7 @@ public class Randomer {
     public Randomer() {
     }
 
-    public int getRand(int left, int right) {
+    public static int getRand(int left, int right) {
         int lenth = (right - left) * ((right - left) < 0 ? -1 : 1);
         int sub = (int) (Math.random() * lenth);
         return right - sub;
