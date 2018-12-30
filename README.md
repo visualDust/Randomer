@@ -3,7 +3,7 @@
 # 最近一次COMMIT
 
 COMMIT的时间
-2018年12月28日 16:16:26
+Sun, Dec 30, 2018  9:07:21 PM
 ---
 > 是谁COMMIT
 
@@ -22,19 +22,13 @@ https://github.com/visualDust/Randomer.git
 > COMMIT的细节
 
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+Your branch is up to date with 'origin/master'.
 
 Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
+  (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	deleted:    2018-12-24_Randomer.md
 	modified:   README.md
-	modified:   src/studio/visualdust/product/Randomer/gui/MainFrame.java
-	modified:   src/studio/visualdust/product/Randomer/method/Randomer.java
-	modified:   src/studio/visualdust/product/Randomer/resource/Resource.java
-	modified:   src/studio/visualdust/product/Randomer/structure/ClickCounter.java
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ---
