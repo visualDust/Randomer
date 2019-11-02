@@ -118,9 +118,9 @@ public class ClickCounter {
                 }
                 while (count > 2) {
                     for (int i = 0; i < 4; i++) {
-                        rand = Randomer.getRand(-achi.elementAt(now - 1).getShift(), achi.elementAt(now - 1).getShift());
+                        rand = Randomer.getRand(-achi.elementAt(now - 1<=0?0:now-1).getShift(), achi.elementAt(now - 1<=0?0:now-1).getShift());
                         frame.display.setLocation(frame.display.getX() + rand, frame.display.getY() + rand);
-                        rand = Randomer.getRand(0, achi.elementAt(now - 1).getShift());
+                        rand = Randomer.getRand(0, achi.elementAt(now - 1<=0?0:now-1).getShift());
                         frame.versionLabel.setLocation(frame.versionLabel.getX() + rand, frame.versionLabel.getY() + rand);
                         try {
                             sleep(250);

@@ -1,32 +1,23 @@
 package studio.visualdust.product.Randomer;
 
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import studio.visualdust.product.Randomer.gui.MainFrame;
 import studio.visualdust.product.Randomer.method.EventRW;
 import studio.visualdust.product.Randomer.resource.Resource;
-import studio.visualdust.product.Randomer.structure.ListItem;
-import studio.visualdust.product.Randomer.structure.LinedFile;
-import studio.visualdust.product.Randomer.structure.ListItem;
-import studio.visualdust.product.Randomer.structure.Shuffler;
-import studio.visualdust.product.Randomer.structure.WeighedShuffler;
 import studio.visualdust.product.gztwigets.GMessageWindow;
 
 import javax.swing.*;
-import javax.swing.plaf.metal.MetalLookAndFeel;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.util.ArrayList;
 
 public class RandomerLauncher {
 
-
     public static void main(String[] args) {
         try {
-            UIManager.setLookAndFeel(new WindowsLookAndFeel());
+//            UIManager.setLookAndFeel(new WindowsLookAndFeel());
         } catch (Exception e) {
             EventRW.Write(e);
         }
